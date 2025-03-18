@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import TodoCreate from './components/TodoCreate'
 import TodoList from './components/TodoList'
+import React from 'react';
 
 
 // <TodoCreate onCreateTodo = {createTodo} /> -> createTodo fonksiyona erişmek isteyen bir kişi onCreateTodo bu props ismi ile yakalayabilir onu
@@ -16,13 +17,18 @@ function App() {
     setTodos([...todos , newTodo]); // önceki todo-ları aç, üzerine de bana gelen newTodo-yu ekle demek !!!
   }
 
+  const removeTodo = (todoId) => {
+    setTodos([...todos.filter((todo) => todo.id !== todoId)]); // buradan dönen array-i alıyoruz, 
+  }
+
+
   console.log(todos);
 
   return (
     <>
     
          <TodoCreate onCreateTodo = {createTodo} />
-         <TodoList todos = {todos} />
+         <TodoList todos = {todos} onRemoveTodo = {removeTodo} />
     </>
   )
 }
