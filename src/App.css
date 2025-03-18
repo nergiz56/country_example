@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #9dc9f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todo-container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  width: 400px;
+  box-shadow: 0 8px 16px rgba(189, 169, 169, 0.2);
+  text-align: center;
+}
+
+.todo-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+.todo-input-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #28a745;
+  border-right: none; /* Butonla birleşmesi için */
+  border-radius: 50px 0 0 50px;
+  font-size: 16px;
+  outline: none;
+  background-color: #ffffff; /* Beyaz arkaplan */
+  color: #333; /* Yazı rengi */
+  height: 60px; /* Butonla hizalı yükseklik */
+  box-sizing: border-box;
+}
+
+.todo-add-btn {
+  width: 60px;
+  height: 60px;
+  background-color: #28a745;
+  color: #fff;
+  border: 1px solid #28a745;
+  border-radius: 0 50px 50px 0;
+  font-size: 32px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.2s;
+  box-sizing: border-box;
+}
+
+.todo-add-btn:hover {
+  background-color: #218838;
+}
+
+.todo-add-btn:active {
+  transform: scale(0.95);
+}
+.success-message {
+  margin-top: 15px;
+  color: #38d34f;
+  font-size: 14px;
+}
+
+.todo-list {
+  margin-top: 20px;
+}
+
+.todo-item {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-item p {
+  font-size: 16px;
+  color: #333;
+}
+
+.todo-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 10px;
+}
