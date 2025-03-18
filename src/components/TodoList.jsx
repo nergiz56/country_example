@@ -1,7 +1,7 @@
 import React from "react"
 import Todo from './Todo.jsx'
 
-export default function TodoList({todos, onRemoveTodo}){
+export default function TodoList({todos, onRemoveTodo, onUpdateTodo}){
 
 
     return(
@@ -11,7 +11,7 @@ export default function TodoList({todos, onRemoveTodo}){
         <div className="todo-list">
             {
                 todos && todos.map((todo) =>
-                    <Todo key={todo.id} todo = {todo} onRemoveTodo = {onRemoveTodo} />
+                    <Todo key={todo.id} todo = {todo} onRemoveTodo = {onRemoveTodo} onUpdateTodo = {onUpdateTodo}/>
 
                 )
             }

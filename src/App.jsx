@@ -21,6 +21,15 @@ function App() {
     setTodos([...todos.filter((todo) => todo.id !== todoId)]); // buradan dönen array-i alıyoruz, 
   }
 
+  const updateTodo = (newTodo) => {
+    const updatedTodos =  todos.map((todo) => {
+          if(todo.id !== newTodo.id){
+              return todo;
+          }
+          return newTodo;
+      })
+      setTodos([...updatedTodos]);
+  }
 
   console.log(todos);
 
@@ -28,7 +37,7 @@ function App() {
     <>
     
          <TodoCreate onCreateTodo = {createTodo} />
-         <TodoList todos = {todos} onRemoveTodo = {removeTodo} />
+         <TodoList todos = {todos} onRemoveTodo = {removeTodo} onUpdateTodo={updateTodo} />
     </>
   )
 }
